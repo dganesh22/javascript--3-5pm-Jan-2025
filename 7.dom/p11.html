@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>document.getElementsByName</h1>
+
+    <form action="">
+        <div>
+            <input type="checkbox" name="user" value="mohan"> mohan
+            <input type="checkbox" name="user" value="john"> john
+            <input type="checkbox" name="user" value="sam"> sam
+            <input type="checkbox" name="user" value="harry"> harry
+            <input type="checkbox" name="user" value="mary"> mary
+        </div>
+    </form>
+
+    <script>
+        let nameEl = document.getElementsByName("user")
+
+        console.log(`names = `, nameEl) // Node list
+
+        let blk = document.querySelector("div") // html-tag/class/id
+
+        blk.addEventListener("change", function (e) {
+            let sel = document.querySelectorAll('input[type="checkbox"]:checked')
+            let selItem = Array.from(sel).map(item => item.value)
+            console.log(`selelted `, selItem)
+        })
+    </script>
+
+</body>
+
+</html>

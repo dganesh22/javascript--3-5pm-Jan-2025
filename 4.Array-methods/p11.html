@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>copywithin</h1>
+
+    <script>
+        var colors = ["red", "green", "blue", "white"]
+
+        console.log(`before = `, colors)
+
+        //array.copyWithin(target_index,source_index)
+        colors.copyWithin(3, 1)
+        console.log(`after =`, colors)
+    </script>
+</body>
+
+</html>

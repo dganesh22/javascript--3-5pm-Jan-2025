@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>onchange</h1>
+    <h1 id="output"></h1>
+    <form action="">
+        <label for="tech">Technologies</label>
+        <select name="tech" id="tech" onchange="handler()">
+            <option value="null">Choose Technology</option>
+            <option value="html">Hypertext Markup language</option>
+            <option value="css">Cascading style Sheet</option>
+            <option value="js">JavaScript</option>
+            <option value="react">React JS</option>
+        </select>
+    </form>
+
+    <script>
+        let outEl = document.getElementById("output")
+        let techEl = document.getElementById("tech")
+
+        function handler(e) {
+            if (techEl.value === "null") {
+                outEl.innerText = "No value selected";
+            } else {
+                outEl.innerText = "selcted value = " + techEl.value;
+            }
+        }
+    </script>
+</body>
+
+</html>

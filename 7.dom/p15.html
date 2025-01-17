@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>document.activeElement</h1>
+
+    <textarea name="msg1" id="msg1" cols="40" rows="6"
+        onmouseup="handler1(event)">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At cupiditate minus fuga cum iure inventore expedita reprehenderit iste, itaque similique, sunt ratione, unde recusandae quas? Temporibus similique doloremque ad totam.</textarea>
+
+
+    <script>
+        function handler1(event) {
+            let selEl = document.activeElement;
+            console.log(`selected `, selEl)
+
+            // read the whole value 
+            let msg = selEl.value;
+            console.log(`msg = `, msg)
+
+            //seleted content
+            let se = msg.substring(selEl.selectionStart, selEl.selectionEnd);
+            console.log(`selected text = `, se)
+        }
+    </script>
+</body>
+
+</html>

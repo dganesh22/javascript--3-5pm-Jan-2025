@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>read data from checkbox</h1>
+
+    <form action="">
+        <div id="technologies">
+            <label for="tech">Choose Technologies</label>
+            <input type="checkbox" name="tech" id="tech" value="html"> HyperText markup language
+            <input type="checkbox" name="tech" id="tech" value="css"> Cascading Style Sheets
+            <input type="checkbox" name="tech" id="tech" value="js"> JavaScript
+            <input type="checkbox" name="tech" id="tech" value="react"> ReactJS
+        </div>
+    </form>
+
+    <script>
+        let techEl = document.querySelector("#technologies");
+
+        techEl.addEventListener("change", function (event) {
+            if (event.target.type = "checkbox") {
+                let chEl = document.querySelectorAll("input[type='checkbox']:checked")
+                const values = Array.from(chEl).map(item => item.value)
+                console.log(`checked values =`, values)
+            }
+        })
+    </script>
+</body>
+
+</html>

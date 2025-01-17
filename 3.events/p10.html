@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>onChange</h1>
+
+    <form action="">
+        <div>
+            <label for="">Select Course</label>
+            <select name="course" id="course" onchange="handler()">
+                <option value="null">Choose Course</option>
+                <option value="html">HTML</option>
+                <option value="css">Css</option>
+                <option value="js">JavaScript</option>
+            </select>
+        </div>
+    </form>
+
+    <script>
+        let crEl = document.getElementById("course")
+        function handler() {
+            let val = crEl.value
+            if (val === "null") {
+                console.log("no value selected")
+            } else {
+                console.log("Selected value " + val)
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>window objects</h1>
+    <button onclick="handler1()">location</button>
+    <button onclick="handler2()">reload</button>
+    <button onclick="handler3()">pathname and hash</button>
+    <button onclick="handler4()">Host</button>
+    <button onclick="handler5()">Protocol</button>
+
+    <script>
+        // window.location.href = "url" or window.location.assign(url)
+        function handler1() {
+            // window.location.href = "/p14.html";
+            // window.location.href = "https://google.com";
+            window.location.assign("https://google.com");
+        }
+
+        // window.location.reload() -> reload the current page
+        function handler2() {
+            window.location.reload()
+        }
+
+        function handler3() {
+            window.location.hash = "test prop"
+            window.location.replace(`/#${window.location.pathname}`)
+        }
+
+        function handler4() {
+            console.log(`host name = `, window.location.host)
+        }
+
+        function handler5() {
+            console.log(`protocol= `, window.location.protocol)
+        }
+
+        /*
+            browser object model (bom)
+            window.alert()
+            window.prompt()
+            window.confirm()
+            window.open()
+            window.close()
+
+            window.screenLeft - return offset of x axis - window.screenX
+            window.screenTop - return offset of y axis - window.screenY
+
+            window.scrollX - return x axis scroll pointer position
+            window.scrollY - return y axis scroll pointer position
+
+            window.history(index) = handles the browser history
+            window.go(index) - forward history
+            window.back(index) - past history
+
+            window.frames -> return a list of frame objects
+
+            window.innerHeight - return inner height of window in px
+            window.innerWidth - return inner width of window in px
+
+            window.length - returns number of frames in the browser
+        */
+    </script>
+</body>
+
+</html>

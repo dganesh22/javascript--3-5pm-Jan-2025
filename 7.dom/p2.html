@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Print the math table</h1>
+    <!-- 
+        1. create a button to handle function
+        2. inside the function
+         prompt() -> to accept the number - n
+
+         use looping statement 
+         print the math table 10 x 1 = 10
+    -->
+
+    <button onclick="generateTable()">Generate Table</button>
+
+    <script>
+        function generateTable() {
+            let x = prompt("Enter your Number?");
+            let num = Number(x);
+
+            for (let i = 1; i <= 10; i++) {
+                document.write(`<h3> ${num} x ${i} = ${num * i} </h3>`)
+            }
+
+        }
+    </script>
+</body>
+
+</html>

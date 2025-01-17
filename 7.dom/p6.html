@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>document.getElementById().value </h1>
+
+    <form onsubmit="submitHandler(event)" method="post">
+        <div>
+            <label for="user">Your username</label>
+            <input type="text" name="user" id="user" required>
+        </div>
+
+        <div>
+            <input type="submit" value="Login" class="btn">
+        </div>
+    </form>
+
+    <script>
+        var userEl = document.getElementById("user")
+
+        function submitHandler(e) {
+            e.preventDefault(); // avoid page refresh after submit
+            let user = userEl.value;
+            console.log(`user = `, user)
+        }
+    </script>
+</body>
+
+</html>

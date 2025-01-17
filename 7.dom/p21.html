@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>document.createTextNode()</h1>
+
+    <p id="txt">sample text content</p>
+
+    <button onclick="addText('welcome')">First text</button>
+    <button onclick="addText('how are you')">second text</button>
+    <button onclick="addText('thankyou')">third text</button>
+
+    <script>
+        function addText(data) {
+            let newTxt = document.createTextNode(data);
+            let para = document.getElementById('txt')
+            para.appendChild(newTxt)
+        }
+    </script>
+</body>
+
+</html>

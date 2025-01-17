@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #output {
+            padding: 10px 12px;
+            border: 2px solid #ccc;
+            width: 60%;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>document.cookie</h1>
+    <form onsubmit="submitHandler(event)" method="post">
+        <div>
+            <label for="name">Your name</label>
+            <input type="text" name="name" id="name" required>
+        </div>
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+
+    <button onclick="removeCookie()">Clear Cookie</button>
+
+    <hr>
+
+    <div id="output"></div>
+
+    <script>
+        let fname = document.getElementById("name")
+
+        function submitHandler(event) {
+            event.preventDefault();
+            let name = fname.value;
+            document.cookie = `username=${name};expires=9 Jan 2025 10:30:00 AM GMT +5.30;SameSite=None;Secure`;
+            alert(`cookie set sucessfuly`)
+            window.location.reload();
+        }
+
+
+        let output = document.getElementById("output")
+        //read cookie data
+        function readData() {
+            if (document.cookie) {
+                let data = document.cookie.split("=")
+                console.log(`cookie = `, data)
+                output.innerHTML = `<h3> cookie name = ${data[0]} and cookie-value = ${data[1]} </h3>`
+            } else {
+                output.innerHTML = `<h3>No cookie is set</h3>`
+            }
+        }
+
+        readData()
+
+        // clear cookie
+        function removeCookie() {
+            if (confirm(`Are you sure to delete cookie?`)) {
+                let tdy = new Date()
+                console.log(`current date and time = `, tdy)
+
+                tdy.setTime(tdy.getTime() - 1) // past time
+
+                document.cookie = `username=;expires=${tdy.toGMTString()}`
+                alert('cookie removed successfully')
+                window.location.reload()
+            }
+        }
+    </script>
+</body>
+
+</html>

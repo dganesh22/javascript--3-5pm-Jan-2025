@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>document.querySelector(html/class/id)</h1>
+
+    <h2 class="title">This is sample class</h2>
+
+    <h3 id="txt">This is sample id</h3>
+    <script>
+        let h1El = document.querySelector("h1")
+        let titleEl = document.querySelector(".title")
+        let txtEl = document.querySelector("#txt")
+
+        h1El.style.color = "orange"
+        titleEl.style.color = "red"
+        txtEl.style.color = "slateblue"
+    </script>
+</body>
+
+</html>

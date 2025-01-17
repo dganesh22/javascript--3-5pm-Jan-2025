@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Number</h1>
+    <script>
+        console.log(`boolean =`, Number(true)) // 1
+        console.log(`boolean =`, Number(false)) // 0
+
+        console.log(`\n`)
+
+        console.log(`date = `, Number(new Date())) // return number in milliseconds passed since 1970
+
+        console.log(`max_value =`, Number.MAX_VALUE) // largest possible max value in js
+        console.log(`min_value =`, Number.MIN_VALUE) // smallest possible min value in js
+
+        console.log(`-infinity =`, Number.NEGATIVE_INFINITY) // -Infinity
+        console.log(`+infinity =`, Number.POSITIVE_INFINITY) // Infinity
+
+        let x = 123.34343
+        console.log(`parseInt = `, parseInt(x))
+
+        let y = 1245.2343
+        console.log(`parseFloat = `, parseFloat(y))
+        console.log(`parseFloat = `, parseFloat(y).toFixed(2))
+    </script>
+</body>
+
+</html>

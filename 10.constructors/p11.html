@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Custom Constructor</h1>
+
+    <script>
+        /* 
+            1. constructor name first letter uppercase (not mandatory)
+            2. follows function in structure
+            3. cann't return 
+
+        */
+
+        // non parameter constructor
+        function Car() {
+            this.title = "Mahindara thar"
+            this.model = 2024
+            this.color = "red"
+            this.getName = function () {
+                return "car name is " + this.title;
+            }
+        }
+
+        let x = new Car()
+
+        console.log(`x = `, x)
+
+        document.write(`<h1> title = ${x.title} </h1>`)
+        document.write(`<h1> model = ${x.model} </h1>`)
+        document.write(`<h1> color = ${x.color} </h1>`)
+        document.write(`<h1> getName = ${x.getName()} </h1>`)
+    </script>
+</body>
+
+</html>

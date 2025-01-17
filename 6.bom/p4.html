@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>open()</h1>
+    <button onclick="handler()">Open</button>
+    <button onclick="handler1()">Open window</button>
+    <script>
+        function handler() {
+            // opens new tab
+            // open(url/path)
+            // open("https://google.com")
+            open("./p1.html")
+        }
+
+        function handler1() {
+            // opens new window
+            open("https://google.com", "window title", "width=400;height=400")
+        }
+    </script>
+</body>
+
+</html>

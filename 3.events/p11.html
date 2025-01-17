@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>onChange on checkbox</h1>
+    <form action="">
+        <div>
+            <label for="">
+                <input type="checkbox" name="agree" id="agree" onchange="handler()"> I here by declarte that above
+                details are true.
+            </label>
+            <p><strong id="out"></strong></p>
+        </div>
+    </form>
+
+    <script>
+        let agEl = document.getElementById("agree")
+        let outEl = document.getElementById("out")
+
+        function handler() {
+            outEl.innerText = agEl.checked
+        }
+    </script>
+</body>
+
+</html>

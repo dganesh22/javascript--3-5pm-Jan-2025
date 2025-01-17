@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>splice(index,deletecount,values)</h1>
+
+    <script>
+        var tech = ["html", "css", "js", "react"]
+
+        console.log(`tech `, tech)
+
+        tech.splice(2, 0, "nodejs", "express")
+        console.log(`tech = `, tech)
+
+        tech.splice(3, 2)
+        console.log(`tech = `, tech)
+
+        tech.splice(1, 2, "jquery", "mongodb", "mysql")
+        console.log(`tech =`, tech)
+    </script>
+</body>
+
+</html>

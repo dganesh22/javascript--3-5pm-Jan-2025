@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>navigator to access geo location</h1>
+
+    <script>
+        function getMyLocation() {
+            navigator.geolocation.getCurrentPosition(function (pos) {
+                console.log(`position`, pos)
+            }, function (err) {
+                console.log(err)
+            }, {
+                enableHighAccuracy: true,
+                timeout: 5000,
+                maximumAge: 0
+            })
+        }
+
+        // setInterval(getMyLocation, 3000)
+        getMyLocation()
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>validating email</h1>
+
+    <div class="container">
+        <form id="mailForm">
+            <div class="form-group">
+                <label for="mail">Email</label>
+                <input type="text" name="mail" id="mail" class="form-input" required>
+                <span class="status" id="mail_status"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn">
+            </div>
+        </form>
+    </div>
+    <script>
+        let mailForm = document.getElementById("mailForm")
+        let mailEl = document.getElementById("mail")
+        let status = document.getElementById("mail_status")
+
+        mailEl.addEventListener("keyup", function (event) {
+
+            // userid@domain.ext
+            let reg = /^[a-z0-9_-]+@[a-z0-9-]+?\.[a-z]{2,16}$/;
+
+            if (reg.test(mailEl.value.toLowerCase())) {
+                status.innerText = "valid email"
+                status.style.color = "green";
+            } else {
+                status.innerText = "invalid email"
+                status.style.color = "orangered"
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">CRUD-JS</a>
+
+            <div class="menu">
+                <a href="index.html">Home</a>
+                <a href="create.html">Create</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="title">
+            <h3>Add User</h3>
+        </div>
+    </div>
+
+    <div class="form-box">
+        <form id="userForm">
+            <div class="form-group">
+                <label for="name">Your name</label>
+                <input type="text" name="name" id="name" class="form-item" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Your email</label>
+                <input type="email" name="email" id="email" class="form-item" required>
+            </div>
+
+            <div class="form-group">
+                <label for="mobile">Your Mobile</label>
+                <input type="number" name="mobile" id="mobile" class="form-item" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pass">Password</label>
+                <input type="password" name="pass" id="pass" class="form-item" required>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Add User" class="btn success">
+                <input type="reset" value="Clear Form" class="btn warning">
+            </div>
+        </form>
+    </div>
+
+    <script src="./js/add.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>validating mobile number</h1>
+
+    <div class="container">
+        <form id="mobileForm">
+            <div class="form-group">
+                <label for="mobile">mobile number</label>
+                <input type="text" name="mobile" id="mobile" class="form-input" required>
+                <span class="status" id="mobile_status"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn">
+            </div>
+        </form>
+    </div>
+    <script>
+        let mobileForm = document.getElementById("mobileForm")
+        let mobileEl = document.getElementById("mobile")
+        let status = document.getElementById("mobile_status")
+
+        mobileEl.addEventListener("keyup", function (event) {
+
+            /* 
+                indian mobile number 10 digits
+                start from 0/91/+91
+                first number starts with 6,7,8,9 
+            */
+
+            let reg = /^(0|91|\+91)?[6-9]\d{9}$/;
+
+            if (reg.test(mobileEl.value)) {
+                status.innerText = "valid mobile number"
+                status.style.color = "green";
+            } else {
+                status.innerText = "invalid mobile number"
+                status.style.color = "orangered"
+            }
+        });
+    </script>
+</body>
+
+</html>

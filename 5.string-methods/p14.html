@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>string match() and string matchAll()</h1>
+
+    <script>
+        var msg = "javascript is front end programming script"
+
+        var exp = /programming/;
+
+        var res = msg.match(exp) // first match index
+
+        console.log(`output = `, res);
+
+        console.log(`\n`)
+
+        // Matchall
+        var msg1 = "javascript is web SCRIPT language, and also can be used as a server Script too.";
+
+        let exp1 = /script/gi;
+
+        var res1 = msg1.matchAll(exp1)
+
+        console.log(`output =`, res1)
+
+        for (let item of res1) {
+            console.log(`values = `, item)
+        }
+    </script>
+</body>
+
+</html>

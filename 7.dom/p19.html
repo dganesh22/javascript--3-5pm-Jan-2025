@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>DOM Siblings</h1>
+
+    <section>
+        <p>sample para-1</p>
+        <p>sample para-2</p>
+        <p>sample para-3</p>
+        <p>sample para-4</p>
+        <p class="fifth">sample para-5</p>
+    </section>
+
+    <script>
+        let pEl = document.querySelector("p");
+
+        console.log(`first =`, pEl) // first el
+
+        console.log(pEl.parentElement) // section
+        console.log(pEl.parentElement.parentElement) // body
+        console.log(pEl.parentElement.parentElement.parentElement) // html
+        console.log(pEl.parentElement.parentElement.parentElement.parentElement) // null
+
+        console.log(`\n`)
+        // child element
+        let blk = document.querySelector("section")
+
+        console.log(blk.children)
+        console.log(blk.children[0])
+        console.log(blk.children[1])
+        console.log(blk.children[2])
+        console.log(blk.children[3])
+        console.log(blk.children[4])
+        console.log(blk.children[4].innerText)
+
+        console.log(`\n`)
+
+        // next element sibling
+        console.log(pEl.nextElementSibling) // para2
+        console.log(pEl.nextElementSibling.nextElementSibling) // para3
+        console.log(pEl.nextElementSibling.nextElementSibling.nextElementSibling)// para4
+        console.log(pEl.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling)//para5
+
+        console.log(`\n`)
+
+        let fifth = document.querySelector(".fifth")
+        console.log(fifth.previousElementSibling) // para4
+        console.log(fifth.previousElementSibling.previousElementSibling) // para3
+        console.log(fifth.previousElementSibling.previousElementSibling.previousElementSibling) // para2
+
+        console.log(`\n`)
+
+        // firstElementChild and lastElementChild
+        console.log(blk.firstChild)
+        console.log(blk.firstElementChild) // para1
+        console.log(blk.lastElementChild)// last child
+    </script>
+</body>
+
+</html>

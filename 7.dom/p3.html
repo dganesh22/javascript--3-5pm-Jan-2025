@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>document.getElementById(id)</h1>
+
+    <button onclick="handler()">Click me</button>
+    <button onclick="handler1()">Insert Image</button>
+
+    <h1 id="msg">no data</h1>
+
+    <hr>
+    <div id="blk"></div>
+
+    <script>
+        var msgEl = document.getElementById("msg")
+        /* innerText, innerHTML  */
+        function handler() {
+            msgEl.innerText = 'welcome to javascript';
+        }
+
+        var blkEl = document.getElementById("blk")
+        function handler1() {
+            blk.innerHTML = `<img src="https://picsum.photos/500/500" alt="no image">`;
+        }
+    </script>
+</body>
+
+</html>

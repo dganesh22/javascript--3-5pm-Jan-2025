@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> document.getElementById().style </h1>
+
+    <div id="blk">
+        <h1>Block-1</h1>
+    </div>
+
+    <button onclick="handler()">Click Me</button>
+
+    <script>
+        var blkEl = document.getElementById("blk")
+
+        function handler() {
+            blkEl.style.backgroundColor = "orange";
+            blkEl.style.color = "white";
+            blkEl.style.paddingTop = "10px";
+            blkEl.style.paddingBottom = "10px";
+        }
+    </script>
+</body>
+
+</html>

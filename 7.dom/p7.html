@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>document.getElementById().value </h1>
+
+    <form onsubmit="submitHandler(event)" method="post">
+        <div>
+            <label for="user">Your username</label>
+            <input type="text" name="user" id="user" required>
+        </div>
+
+        <div>
+            <label for="pass">Your Password</label>
+            <input type="password" name="pass" id="pass" required>
+        </div>
+
+        <div>
+            <label for="agree">
+                <input type="checkbox" name="agree" id="agree"> I here by declarate that above data are true.
+            </label>
+        </div>
+
+        <div>
+            <input type="submit" value="Login" class="btn">
+        </div>
+    </form>
+
+    <div id="error"></div>
+
+    <script>
+        var userEl = document.getElementById("user")
+        var passEl = document.getElementById("pass")
+        var agreeEl = document.getElementById("agree")
+        var errorEl = document.getElementById("error")
+
+        function submitHandler(e) {
+            e.preventDefault();
+
+            // console.log('user =', userEl.value)
+
+            if (agreeEl.checked) {
+                let data = {
+                    username: userEl.value,
+                    password: passEl.value
+                };
+                console.log(`user = `, data)
+            } else {
+                printError("Check the agreement statement")
+            }
+        }
+
+        function printError(msg) {
+            errorEl.innerHTML = `<h3> ${msg} </h3>`;
+            errorEl.style.color = "red";
+
+            setTimeout(function () {
+                errorEl.innerHTML = "";
+            }, 4000)
+        }
+    </script>
+</body>
+
+</html>

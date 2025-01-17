@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>map</h1>
+    <script>
+        // map return an array
+
+        var users = [
+            {
+                name: "john",
+                gender: "male"
+            },
+            {
+                name: "mary",
+                gender: "female"
+            },
+            {
+                name: "sam",
+                gender: "male"
+            },
+            {
+                name: "steve",
+                gender: "male"
+            },
+            {
+                name: "anna",
+                gender: "female"
+            }
+        ]
+
+        console.log(`users = `, users)
+
+        let out = users.map(function (item, index) {
+            if (item.gender === "male") {
+                return "Mr." + item.name;
+            } else if (item.gender === "female") {
+                return "Miss." + item.name;
+            } else {
+                return item.name;
+            }
+        });
+
+        console.log(`output =`, out)
+    </script>
+</body>
+
+</html>

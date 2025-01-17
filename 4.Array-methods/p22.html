@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Array.reduceRight()</h1>
+
+    <script>
+        var arr1 = [
+            [0, 1, 2],
+            [3, 4, 5],
+            [6, 7, 8]
+        ]
+
+        console.log(`array`, arr1)
+
+        var res = arr1.reduceRight((ac, cu) => {
+            return ac.concat(cu)
+        })
+
+        console.log(`output =`, res)
+    </script>
+</body>
+
+</html>

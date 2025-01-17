@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Media events</h1>
+    <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" width="400"
+        height="250" id="bigbuckbunny"></video>
+
+    <hr>
+    <button id="play">Play</button>
+    <button id="pause">Pause</button>
+
+    <script>
+        let vEl = document.getElementById("bigbuckbunny")
+        let plBtn = document.getElementById("play")
+        let paBtn = document.getElementById("pause")
+
+        plBtn.addEventListener("click", function () {
+            vEl.play();
+        });
+
+        paBtn.addEventListener("click", function () {
+            vEl.pause();
+        });
+    </script>
+</body>
+
+</html>

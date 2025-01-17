@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Task</h1>
+
+    <!-- 
+        w.a.p to calculate the avg and total marks of 3 students
+        1. students marks accept through prompt s1,s2,s3
+        2. convert into number = Number(s1)
+        3. calculate total marks and avg
+        4. print in #result h1 tag - total , h2 = avg
+    -->
+
+    <button onclick="handler()">Click Me</button>
+
+    <div id="result"></div>
+
+    <script>
+        var resEl = document.getElementById("result")
+
+        function handler() {
+            var s1 = prompt("Enter student 1 marks?")
+            var s2 = prompt("Enter student 2 marks?")
+            var s3 = prompt("Enter student 3 marks?")
+
+            var total = Number(s1) + Number(s2) + Number(s3);
+            var avg = total / 3;
+
+            resEl.innerHTML = `<section>
+                                    <h1> Total = ${total} </h1>
+                                    <h2> Avg = ${avg} </h2>
+                             </section>`;
+        }
+    </script>
+</body>
+
+</html>

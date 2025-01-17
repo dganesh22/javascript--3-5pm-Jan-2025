@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>sort method</h1>
+    <script>
+        var nums = [99, 1, 9, 3, 4, 8, 6, 11, 29, 53, 44]
+
+        console.log(`before =`, nums)
+
+        /* 
+            array.sort(function(a,b){
+                return a - b // lower to heigher
+                return b - a // heigher to lower
+            })
+        */
+
+        var out1 = nums.sort(function (a, b) {
+            return a - b
+        })
+
+        console.log(`asc =`, out1)
+
+        var out2 = nums.sort(function (a, b) {
+            return b - a
+        })
+
+        console.log(`dece =`, out2)
+    </script>
+</body>
+
+</html>

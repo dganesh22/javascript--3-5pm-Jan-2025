@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>document.hasFocus()</h1>
+
+    <p id="log">Focus results</p>
+
+    <button id="btn">Open new window</button>
+
+    <script>
+        let bodyEl = document.querySelector("body")
+        let log = document.getElementById("log")
+        let btnEl = document.getElementById("btn")
+
+        btn.onclick = function () {
+            open("https://flipkart.com", 'new window', 'height=400;width=400;')
+        }
+
+        function checkFocus() {
+            if (document.hasFocus()) {
+                log.innerText = "this document has focus";
+                bodyEl.style.background = "green";
+            } else {
+                log.innerText = "you are out of focus on current document."
+                bodyEl.style.background = "grey";
+            }
+        }
+
+        setInterval(checkFocus, 500)
+    </script>
+</body>
+
+</html>

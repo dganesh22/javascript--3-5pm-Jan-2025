@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+
+        .blk {
+            height: 100px;
+            width: 100px;
+            border: 2px solid #222;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>document.getElmentsByClassName()</h1>
+    <section>
+        <div class="blk">block</div>
+        <div class="blk">block</div>
+        <div class="blk">block</div>
+        <div class="blk">block</div>
+        <div class="blk">block</div>
+        <div class="blk">block</div>
+    </section>
+
+    <script>
+        let blkEl = document.getElementsByClassName("blk")
+        console.log('blkEl =', blkEl) // html collection
+
+        Array.from(blkEl).forEach((item) => {
+            item.addEventListener("click", function (e) {
+                e.target.style.width = "40px";
+                e.target.style.height = "40px";
+                e.target.style.backgroundColor = "deeppink";
+                e.target.style.borderRadius = "50%";
+            })
+        })
+    </script>
+</body>
+
+</html>

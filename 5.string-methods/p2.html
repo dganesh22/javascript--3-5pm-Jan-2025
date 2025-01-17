@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>string replace , slice, substr and substring </h1>
+
+    <script>
+        var str1 = "John is an engineer. JOHN is working in Ibm. john stays in  banglore";
+
+        console.log(`str =`, str1)
+
+        console.log(`replace = `, str1.replace("john", "sam"))
+        //  /expression/
+        console.log(`replace = `, str1.replace(/john/, "sam"))
+        console.log(`replace = `, str1.replace(/john/gi, "sam"))
+
+        // gi -> global case insensitive
+
+        console.log(`\n`)
+
+        /* to slice the string */
+        // slice(start,end)
+        console.log(`slice = `, str1.slice(0, 19))
+
+        // substring(start,end)
+        console.log(`substring = `, str1.substring(0, 19))
+
+        // substr(start,length)
+        console.log(`substr =`, str1.substr(11, 5))
+        console.log(`substr =`, str1.substring(2, 5))
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>document.createElement() </h1>
+
+    <div id="blk"></div>
+
+    <script>
+
+        let blkEl = document.getElementById('blk')
+
+        let imgEl = document.createElement('img')
+        imgEl.src = "https://picsum.photos/500/500"
+        imgEl.width = "300"
+        imgEl.height = "300"
+
+        // title - h1 tag
+        let titleEl = document.createElement("h1")
+        titleEl.textContent = "Title-1"
+
+
+        blkEl.appendChild(imgEl)
+        blkEl.appendChild(titleEl)
+
+    </script>
+</body>
+
+</html>

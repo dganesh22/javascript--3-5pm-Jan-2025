@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>validating name</h1>
+
+    <div class="container">
+        <form id="userForm">
+            <div class="form-group">
+                <label for="user">Username</label>
+                <input type="text" name="user" id="user" class="form-input" minlength="3" maxlength="16" required>
+                <span class="status" id="user_status"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn">
+            </div>
+        </form>
+    </div>
+    <script>
+        let userForm = document.getElementById("userForm")
+        let userEl = document.getElementById("user")
+        let status = document.getElementById("user_status")
+
+        userEl.addEventListener("keyup", function (event) {
+
+            let reg = /^[A-Za-z]{3,16}$/;
+
+            if (reg.test(userEl.value)) {
+                status.innerText = "valid input"
+                status.style.color = "green";
+            } else {
+                status.innerText = "invalid input"
+                status.style.color = "orangered"
+            }
+        });
+    </script>
+</body>
+
+</html>

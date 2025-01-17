@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>sort the given array based on marks as ref</h1>
+
+    <script>
+        var students = [
+            { name: "john", marks: 24 },
+            { name: "steve", marks: 23 },
+            { name: "mary", marks: 20 },
+            { name: "anna", marks: 23 },
+            { name: "david", marks: 21 },
+            { name: "sony", marks: 22 },
+            { name: "mike", marks: 24 },
+            { name: "avin", marks: 23 },
+            { name: "bose", marks: 20 },
+            { name: "ali", marks: 18 }
+        ]
+
+        function sortMarks(arr, ref) {
+            return arr.reduce((ac, cu) => {
+                console.log(`ac=`, ac, " and cu =", cu)
+                let val = cu[ref]; //cu[marks]
+
+                if (!ac[val]) {
+                    ac[val] = []; // empty array based on marks list
+                }
+
+                ac[val].push(cu) // push the object of user and marks to the marks key and its is an array
+
+                return ac
+            }, {})
+        }
+
+        sortMarks(students, "marks")
+    </script>
+</body>
+
+</html>

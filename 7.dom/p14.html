@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>document.formName.fieldname.value</h1>
+
+    <form name="signin" onsubmit="submitHandler(event)">
+        <div>
+            <label for="user">Username</label>
+            <input type="text" name="user" id="user" required>
+        </div>
+
+        <div>
+            <label for="pass">Password</label>
+            <input type="password" name="pass" id="pass" required>
+        </div>
+
+        <div>
+            <input type="submit" value="Login">
+        </div>
+    </form>
+
+    <script>
+        function submitHandler(e) {
+            e.preventDefault();
+            let user = document.signin.user.value;
+            let pass = document.signin.pass.value;
+
+            let data = {
+                username: user,
+                password: pass
+            }
+            console.log(`user data = `, data)
+        }
+    </script>
+</body>
+
+</html>

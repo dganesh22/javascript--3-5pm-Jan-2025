@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Events</h1>
+    <!-- 
+        Action Listeners 
+            with events we can recognize the actions executing on DOM
+        
+        Implement action listeners on dom - 3 methods
+            1. Event as an Attribute
+            2. Using DOM.addEventListener(event,function)
+            3. DOM.event = function(){}
+    -->
+
+    <!-- event as an attribute -->
+    <button onclick="print()">Click me</button>
+
+
+    <script>
+        function print() {
+            alert(`hello world`)
+        }
+
+    </script>
+</body>
+
+</html>

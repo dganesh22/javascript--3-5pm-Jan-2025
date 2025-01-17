@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>close()</h1>
+
+    <button onclick="openHandler()">open</button>
+    <button onclick="clsHandler()">close</button>
+    <script>
+        var x;
+
+        function openHandler() {
+            // x = open("https://gmail.com") // new tab - open(path)
+            x = open("https://gmail.com", "", "width=400;height=400;") //new window - open(path,title,properties)
+        }
+
+        function clsHandler() {
+            x.close()
+        }
+    </script>
+</body>
+
+</html>

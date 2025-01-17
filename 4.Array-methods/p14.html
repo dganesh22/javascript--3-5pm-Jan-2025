@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>every()</h1>
+
+    <script>
+        let ageGroup = [19, 18, 14, 22, 24, 16, 17, 12];
+
+        function check(age) {
+            return age <= 25;
+        }
+
+        let re1 = ageGroup.every(check);
+        console.log(`every =`, re1); // true
+
+        let ageGroup1 = [19, 18, 14, 22, 24, 16, 17, 12, 26];
+        let re2 = ageGroup1.every(check);
+        console.log(`every =`, re2); // false
+
+        console.log(`\n`)
+
+        let re3 = ageGroup1.some(check);
+        console.log(`some = `, re3); // true
+    </script>
+</body>
+
+</html>

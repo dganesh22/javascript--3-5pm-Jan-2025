@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Array methods</h1>
+    <!-- store data into an array
+         push(val) - insert the value from ending index
+         pop()  - to remove the value from ending index
+         unshift(val) -> to insert the value from beginning index
+         shift() -> to remove the value from beginning index
+         splice(index,deletecount,values)
+    -->
+
+    <script>
+        var users = [];
+
+        console.log(`users = `, users)
+        users.push("john")
+        console.log(`users =`, users)
+
+        users.push("mary")
+        console.log(`users =`, users)
+
+        users.push("sam")
+        console.log(`users =`, users)
+
+        users.push("steve")
+        console.log(`users =`, users)
+
+        users.pop()
+        console.log(`users =`, users)
+
+        users.pop()
+        console.log(`users =`, users)
+
+        users.pop()
+        console.log(`users =`, users)
+    </script>
+</body>
+
+</html>

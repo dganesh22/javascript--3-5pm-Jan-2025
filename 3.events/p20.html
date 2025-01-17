@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Read the value from radio buttons</h1>
+
+    <form action="">
+        <div>
+            <label for="gender">Gender</label> <br>
+            Male <input type="radio" name="gender" id="gender" value="male"> <br>
+            female <input type="radio" name="gender" id="gender" value="female"> <br>
+            Transgender <input type="radio" name="gender" id="gender" value="transgender">
+        </div>
+    </form>
+
+    <script>
+        let radEl = document.querySelectorAll("#gender");
+        console.log(`all elements = `, radEl); // array of nodelist (target elements array)
+
+        radEl.forEach(item => {
+            item.addEventListener("change", function (event) {
+                if (event.target.checked) {
+                    console.log(`selected value `, event.target.value)
+                } else {
+                    alert("no value selected")
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
