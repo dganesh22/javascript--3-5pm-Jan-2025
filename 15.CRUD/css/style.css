@@ -131,5 +131,29 @@ form .form-group {
     .form-group .form-item {
         width: 90%;
     }
+}
 
+.content {
+    width: 100%;
+    margin: auto;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    table-layout: auto;
+    text-align: center;
+}
+
+table,
+tr,
+td,
+th {
+    border: 1px solid slategray;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    padding: 6px;
 }
